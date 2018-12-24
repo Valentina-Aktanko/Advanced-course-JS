@@ -1,0 +1,52 @@
+#myMenu, #mySubMenu {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    width: 100px;
+}
+
+#myMenu {
+    margin-bottom: 50px;
+}
+
+#myMenu li, #mySubMenu li {
+    border-bottom: 1px solid #666;
+}
+
+#myMenu a, #mySubMenu a {
+    background-color: #949494;
+    color: #fff;
+    padding: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+}
+
+#mySubMenu a {
+    padding-left: 25px;
+}
+
+#myMenu a:hover, #mySubMenu a:hover {
+    background-color: #666;
+}
+
+.button {
+    color: #fff;
+    text-decoration: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background: rgb(240,100,30);
+    padding: .7em 1.5em;
+    outline: none;
+}
+
+.button:hover {
+    background: rgb(240,120,70);
+}
+
+.button:active {
+    background: rgb(220,80,15);
+}
+
