@@ -7,10 +7,9 @@
 </head>
 <body>
 <div id="menu"></div>
-<a href="#" class="button" id="removeMenu">Remove menu</a>
-<script src = Menu.js></script>
-<script src = SubMenu.js></script>
+<button id="del-btn">Remove</button>
 <script src = MenuItem.js></script>
+<script src = Menu.js></script>
 <script>
     window.onload = () => {
         // DOM ready
@@ -19,7 +18,7 @@
         let menu = new Menu('myMenu', 'myMenu', [
             new MenuItem('/', 'Home'),
             new MenuItem('/about', 'About'),
-            new SubMenu('mySubMenu', 'mySubMenu', [
+            new SubMenu('/mens', 'Mens', 'mySubMenu', 'mySubMenu', [
                 new MenuItem('/info', 'Info'),
                 new MenuItem('/contacts', 'Contacts'),
             ]),
@@ -29,11 +28,7 @@
         ]);
 
         block.innerHTML = menu.render();
-
-        let button = document.getElementById('removeMenu');
-        button.addEventListener('click', () => {
-           menu.remove();
-        });
+        document.getElementById('del-btn').addEventListener('click', () => {menu.remove();});
     }
 </script>
 </body>
