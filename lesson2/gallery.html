@@ -5,7 +5,7 @@
     <title>Title</title>
 </head>
 <body>
-<div id="gallary-wrapper"></div>
+<div id="gallary-wrapper" class="galleryPreviewsContainer"></div>
 <script>
     window.onload = () => {
         let block = document.getElementById('gallary-wrapper');
@@ -23,7 +23,12 @@
                     img.src = item.src;
                     img.alt = item.alt;
                     console.log(img);
+                    console.log(item);
+                    console.log(i);
                     block.appendChild(img);
+                    img.addEventListener('click', () => {
+
+                    })
                 })
             })
     }
