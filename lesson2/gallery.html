@@ -9,6 +9,17 @@
 <script>
     window.onload = () => {
         let block = document.getElementById('gallary-wrapper"');
+
+        fetch('gallery.json')
+            .then(result => {
+                console.log(result);
+                return result.json();
+            })
+            .then(arr => {
+                arr.forEach(function(item, i, arr) {
+                    let img = new Image(arr)
+                })
+            })
     }
 </script>
 </body>
