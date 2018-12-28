@@ -12,12 +12,15 @@
 
         fetch('gallery.json')
             .then(result => {
-                console.log(result);
+                // console.log(result);
                 return result.json();
             })
             .then(arr => {
                 arr.forEach(function(item, i, arr) {
-                    let img = new Image(arr)
+                    let img = new Image(100, 200);
+                    img.src = arr.src;
+                    img.alt = arr.alt;
+                    // console.log(img);
                 })
             })
     }
