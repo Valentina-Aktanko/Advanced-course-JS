@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1326ab28-5ff1-458a-aef5-3fd8db39a0fa" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/lesson2/gallery.html" beforeDir="false" afterPath="$PROJECT_DIR$/lesson2/gallery.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson2/gallery.json" beforeDir="false" afterPath="$PROJECT_DIR$/lesson2/gallery.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,7 +41,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="99" />
-          <entry key="html" value="2865" />
+          <entry key="html" value="2903" />
           <entry key="js" value="991" />
           <entry key="json" value="198" />
         </counts>
@@ -48,7 +49,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="99" />
-          <entry key="HTML" value="2865" />
+          <entry key="HTML" value="2903" />
           <entry key="JSON" value="198" />
           <entry key="JavaScript" value="991" />
         </counts>
@@ -59,7 +60,7 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/lesson2/ajax.html">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="620">
@@ -77,11 +78,14 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/lesson2/gallery.json">
               <provider selected="true" editor-type-id="text-editor">
-                <state>
-                  <caret column="1" lean-forward="true" selection-start-column="1" selection-end-column="1" />
+                <state relative-caret-position="68">
+                  <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
+                  <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+                  <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+                  <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
                 </state>
               </provider>
             </entry>
@@ -93,8 +97,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/lesson2/gallery.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="255">
-                  <caret line="15" column="37" lean-forward="true" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
+                <state relative-caret-position="170">
+                  <caret line="10" column="60" selection-start-line="10" selection-start-column="60" selection-end-line="10" selection-end-column="60" />
                 </state>
               </provider>
             </entry>
@@ -242,12 +246,12 @@
       <updated>1545719930824</updated>
       <workItem from="1545719933247" duration="1000000" />
       <workItem from="1545778490640" duration="11609000" />
-      <workItem from="1545957748602" duration="13926000" />
+      <workItem from="1545957748602" duration="14448000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26535000" />
+    <option name="totallyTimeSpent" value="27057000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -344,13 +348,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lesson2/gallery.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="1" lean-forward="true" selection-start-column="1" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lesson2/lesson2.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
@@ -365,10 +362,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/lesson2/gallery.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
+          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+          <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+          <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lesson2/gallery.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="37" lean-forward="true" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
+        <state relative-caret-position="170">
+          <caret line="10" column="60" selection-start-line="10" selection-start-column="60" selection-end-line="10" selection-end-column="60" />
         </state>
       </provider>
     </entry>

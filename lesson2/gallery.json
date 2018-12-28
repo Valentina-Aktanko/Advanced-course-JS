@@ -1,6 +1,6 @@
 [
-  {"src": "img/min/1.jpeg", "srcMax": "img/max/1.jpeg", "alt": "world of javascript"},
-  {"src": "img/min/2.jpeg", "srcMax": "img/max/2.jpeg", "alt": "js by screen"},
-  {"src": "img/min/3.jpeg", "srcMax": "img/max/3.jpeg", "alt": "learning javascript"},
-  {"src": "img/min/4.jpeg", "srcMax": "img/max/4.jpeg", "alt": "javascript in the house"}
+  {"src": "img/min/1.jpg", "srcMax": "img/max/1.jpg", "alt": "world of javascript"},
+  {"src": "img/min/2.jpg", "srcMax": "img/max/2.jpg", "alt": "js by screen"},
+  {"src": "img/min/3.jpg", "srcMax": "img/max/3.jpg", "alt": "learning javascript"},
+  {"src": "img/min/4.jpg", "srcMax": "img/max/4.jpg", "alt": "javascript in the house"}
 ]

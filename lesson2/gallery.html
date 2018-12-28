@@ -5,22 +5,25 @@
     <title>Title</title>
 </head>
 <body>
-<div class="gallary-wrapper"></div>
+<div id="gallary-wrapper"></div>
 <script>
     window.onload = () => {
-        let block = document.getElementById('gallary-wrapper"');
+        let block = document.getElementById('gallary-wrapper');
 
         fetch('gallery.json')
             .then(result => {
-                // console.log(result);
+                console.log(result);
                 return result.json();
             })
             .then(arr => {
+                console.log(arr);
                 arr.forEach(function(item, i, arr) {
-                    let img = new Image(100, 200);
-                    img.src = arr.src;
-                    img.alt = arr.alt;
-                    // console.log(img);
+                    console.log(item);
+                    let img = new Image();
+                    img.src = item.src;
+                    img.alt = item.alt;
+                    console.log(img);
+                    block.appendChild(img);
                 })
             })
     }
