@@ -5,32 +5,18 @@
     <title>Title</title>
 </head>
 <body>
-<div id="gallary-wrapper" class="galleryPreviewsContainer"></div>
+<div id="gallery-wrap" class="gallery-wrap"></div>
+<!--let template = `-->
+<!--<div id="${this.settings.id}" class="modal-wrap">-->
+    <!--<div class="top-block">-->
+        <!--<button type="button" class="${this.settings.btn}" aria-label="Close"></button>-->
+    <!--</div>-->
+    <!--<div class="${this.settings.imgWrap}"></div>-->
+<!--</div>-->
+<script src="Gallery.js"></script>
 <script>
     window.onload = () => {
-        let block = document.getElementById('gallary-wrapper');
-
-        fetch('gallery.json')
-            .then(result => {
-                console.log(result);
-                return result.json();
-            })
-            .then(arr => {
-                console.log(arr);
-                arr.forEach(function(item, i, arr) {
-                    console.log(item);
-                    let img = new Image();
-                    img.src = item.src;
-                    img.alt = item.alt;
-                    console.log(img);
-                    console.log(item);
-                    console.log(i);
-                    block.appendChild(img);
-                    img.addEventListener('click', () => {
-
-                    })
-                })
-            })
+        let gallery = new Gallery('gallery.json', '.gallery-wrap');
     }
 </script>
 </body>

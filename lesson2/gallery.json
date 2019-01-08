@@ -1,6 +1,38 @@
 [
-  {"src": "img/min/1.jpg", "srcMax": "img/max/1.jpg", "alt": "world of javascript"},
-  {"src": "img/min/2.jpg", "srcMax": "img/max/2.jpg", "alt": "js by screen"},
-  {"src": "img/min/3.jpg", "srcMax": "img/max/3.jpg", "alt": "learning javascript"},
-  {"src": "img/min/4.jpg", "srcMax": "img/max/4.jpg", "alt": "javascript in the house"}
+  {
+    "src": "img/1.jpg",
+    "alt": "tree in the mountains"
+  },
+  {
+    "src": "img/2.jpg",
+    "alt": "field and forest"
+  },
+  {
+    "src": "img/3.jpg",
+    "alt": "clouds in the sea"
+  },
+  {
+    "src": "img/4.jpg",
+    "alt": "foggy temple"
+  },
+  {
+    "src": "img/5.jpg",
+    "alt": "sunny village"
+  },
+  {
+    "src": "img/6.jpg",
+    "alt": "sea view from the forest"
+  },
+  {
+    "src": "img/7.jpg",
+    "alt": "volcano"
+  },
+  {
+    "src": "img/8.jpg",
+    "alt": "swamp"
+  },
+  {
+    "src": "img/min/9.jpg",
+    "alt": "desert"
+  }
 ]
