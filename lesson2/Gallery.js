@@ -10,7 +10,7 @@ class Modal {
         let template = `
                 <div id="${this.settings.id}" class="modal-wrap">
                     <div class="top-block">
-                        <button type="button" class="${this.settings.btn}" aria-label="Close"></button>
+                        <button type="button" class="${this.settings.btn}" aria-label="Close"><span aria-hidden="true">×</span></button>
                     </div>
                     <div class="${this.settings.imgWrap}"></div>
                 </div>`;
