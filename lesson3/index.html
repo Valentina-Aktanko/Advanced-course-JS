@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<form action="#" method="post" class="myForm" id="myForm">
+    <!--Имя-->
+    <label for="name" class="label">Имя</label>
+    <input type="text" class="field" id="name" name="name" placeholder="Name">
+    <!--Телефон-->
+    <label for="name" class="label">Телефон</label>
+    <input type="text" class="field" id="phone" name="phone" placeholder="+7(000)000-0000">
+    <!--Email-->
+    <label for="name" class="label">E-mail</label>
+    <input type="text" class="field" id="email" name="email"  placeholder="mymail@mail.ru">
+    <!--Произвольный текст-->
+    <label for="name" class="label">Текст обращения</label>
+    <textarea class="field textarea" id="message" name="messageText" cols="30" rows="10" placeholder="Произвольный текст"></textarea>
+    <!--Кнопка оправки формы-->
+    <button class="button" type="submit">Отправить</button>
+</form>
+
+<script>
+    window.onload = () => {
+        document.getElementById('myForm').addEventListener('submit', event => {
+            event.preventDefault();
+
+            let listOfElements = document.querySelectorAll('.field');
+
+            listOfElements.forEach(function (currentValue) {
+                new Validate(currentValue);
+            });
+
+
+        })
+    }
+</script>
+<script src="Validate.js"></script>
+</body>
+</html>

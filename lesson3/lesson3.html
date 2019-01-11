@@ -72,6 +72,39 @@
 
     console.log('color colour colotr'.match(/colo[ut]?r/g));
 
+    // Начало и конец строки
+    console.log('Язык java'.match(/java$/i));
+    console.log('Язык java test'.match(/java$/i));
+
+    console.log('java Язык'.match(/^java/i));
+    console.log('Язык java test'.match(/^java/i));
+
+    console.log('java'.match(/^java$/i));
+    console.log('Язык java test'.match(/^java$/i));
+
+    // Методы регулярных выражений
+
+    // test
+    console.log(/java/i.test(str));
+    console.log(/java/.test(str));
+
+    // exec
+    console.log(/java/i.exec(str));
+    console.log(/java/ig.exec(str));
+
+    let result;
+    let regExp2 = /java/ig;
+
+    console.log(`Начальный ${regExp2.exec(str))}`)
+
+    while(result = regExp2.exec(str)) {
+        console.log(result);
+        console.log(`Найдено на позиции ${result.index}`);
+        console.log(`Текущий ${regExp2.lastIndex}`);
+    }
+
+    console.log(`Конечный ${regExp2.lastIndex}`);
+
 </script>
 </body>
 </html>
