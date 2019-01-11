@@ -30,8 +30,10 @@ class Validate {
     _getRegExp(name) {
         if (name === 'name') {
             return /^[A-zА-яЁё]+$/
-        } else {
-            return /\d/;
+        } else if (name === 'phone') {
+            return /^\+(7)\([\d]{3}\)[\d]{3}\-[\d]{4}$/;
+        } else if (name === 'email') {
+            return /^[a-zA-Z\.\-]+\@[a-zA-Z]+\.(ru|com)$/;
         }
     }
 
