@@ -9,16 +9,26 @@
 <form action="#" method="post" class="myForm" id="myForm">
     <!--Имя-->
     <label for="name" class="label">Имя</label>
-    <input type="text" class="field" id="name" name="name" placeholder="Name">
+    <div class="fieldGroup">
+        <input type="text" class="field" id="name" name="name" placeholder="Name" data-errorId="errorName">
+        <label class="errorLabel hide" id="errorName">Имя должно содержать только буквы</label>
+    </div>
     <!--Телефон-->
     <label for="name" class="label">Телефон</label>
-    <input type="text" class="field" id="phone" name="phone" placeholder="+7(000)000-0000">
+    <div class="fieldGroup">
+        <input type="text" class="field" id="phone" name="phone" placeholder="+7(000)000-0000" data-errorId="errorPhone">
+        <label class="errorLabel hide" id="errorPhone">Телефон должен быть в формате: +7(000)000-0000</label>
+    </div>
     <!--Email-->
     <label for="name" class="label">E-mail</label>
-    <input type="text" class="field" id="email" name="email"  placeholder="mymail@mail.ru">
+    <div class="fieldGroup">
+        <input type="text" class="field" id="email" name="email" placeholder="mymail@mail.ru" data-errorId="errorEmail">
+        <label class="errorLabel hide" id="errorEmail">E-mail должен быть в формате mymail@mail.ru</label>
+    </div>
     <!--Произвольный текст-->
     <label for="name" class="label">Текст обращения</label>
-    <textarea class="field textarea" id="message" name="messageText" cols="30" rows="10" placeholder="Произвольный текст"></textarea>
+    <textarea class="textarea" id="message" name="messageText" cols="30" rows="10"
+              placeholder="Произвольный текст"></textarea>
     <!--Кнопка оправки формы-->
     <button class="button" type="submit">Отправить</button>
 </form>
@@ -33,8 +43,6 @@
             listOfElements.forEach(function (currentValue) {
                 new Validate(currentValue);
             });
-
-
         })
     }
 </script>
