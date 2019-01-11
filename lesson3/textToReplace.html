@@ -24,7 +24,7 @@
         'Two: \'I\'ll see you next time.\'\n' +
         'One: \'Sure. Bye.\'';
 
-    text = text.replace(/\'/g, "\"");
+    text = text.replace(/\B\'/g, "\"");
     console.log(text);
 
 </script>
