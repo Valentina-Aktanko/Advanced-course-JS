@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .orange {
+            color: #fff;
+            background-color: orange;
+        }
+        .strong {
+            font-weight: bold;
+            font-style: 3em;
+        }
+    </style>
+</head>
+<body>
+<p id="p1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, consectetur cupiditate dicta facere fugiat id
+    inventore pariatur possimus quibusdam quis quod similique sit. Dignissimos dolorum expedita inventore itaque, iusto
+    non.</p>
+<p>Blanditiis corporis distinctio dolores est in, maiores mollitia odit quod quos ratione? Assumenda atque deleniti
+    dolore dolorem, enim esse facere fuga illo iste iusto perspiciatis possimus, quia quisquam veniam voluptates?</p>
+<p class="text">Accusamus ad, adipisci alias amet aperiam architecto aspernatur assumenda atque autem delectus eum ex, harum illo
+    ipsa itaque laboriosam libero maxime necessitatibus non nostrum optio quae qui sunt tenetur voluptatem.</p>
+<p>Facere neque possimus ut. Amet aut cupiditate, dolor, excepturi explicabo laboriosam nam necessitatibus nobis
+    quibusdam reiciendis sequi tempora velit voluptatem! Error ipsum iure libero nobis provident quae quaerat sequi,
+    similique.</p>
+<p>Aut cumque dolore illum itaque iure nostrum officiis porro quas suscipit temporibus! Ad aliquam aut, deserunt dolor,
+    ea laudantium modi nisi officia qui quibusdam sit sunt vitae! Atque numquam, totam.</p>
+<p class="text">A aut beatae doloremque earum error, et, fugit itaque magnam minus nobis officiis perferendis placeat voluptatum. A
+    aliquam atque autem facere illum minus molestias nesciunt perspiciatis, quo tempora totam vitae?</p>
+<p>Ab accusamus consequatur deleniti dolor eligendi esse est eum ex facilis iste labore nihil nisi nostrum odit,
+    officiis perspiciatis porro praesentium quae qui quia repellendus saepe temporibus velit veniam voluptatibus.</p>
+<p class="text"Ab itaque maiores ratione voluptatum? At dolor eligendi et expedita labore, maxime nam nostrum odit pariatur quia
+    quis ratione, repellendus saepe sequi ut voluptates voluptatum? Earum et magnam perspiciatis unde!</p>
+<p>Accusantium alias commodi cumque, delectus doloremque dolores ducimus eum eveniet exercitationem expedita facilis
+    incidunt minima minus natus neque nihil nulla qui quod, sapiente voluptas. Animi aspernatur aut earum iusto
+    officia?</p>
+<p class="text">Aliquam aspernatur autem eligendi, error excepturi expedita fugit harum magnam maxime pariatur, perspiciatis repellat
+    tempora? Aliquid architecto debitis dolores eius, excepturi fuga fugiat itaque, iusto obcaecati rem sit soluta
+    vel.</p>
+<p>Accusantium ad aliquid animi, culpa, ea error exercitationem molestias odit reiciendis repudiandae sapiente sequi,
+    suscipit. Accusantium, aspernatur dicta eveniet fugit itaque nobis numquam odit officia optio perspiciatis quaerat
+    reiciendis velit.</p>
+<p>A, ad aliquam assumenda atque consequuntur corporis dolor, doloremque eaque eum excepturi exercitationem fuga iste
+    iure mollitia nobis nulla pariatur praesentium quasi quos rem repellat repellendus reprehenderit repudiandae ullam
+    veritatis.</p>
+<p class="text">Aliquam deserunt eius fugit magni sit. Blanditiis consectetur dolorem doloribus enim in labore modi, odio odit
+    officiis quod reprehenderit suscipit tenetur voluptates! Atque dolor exercitationem molestias sint velit? Ad,
+    provident?</p>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<div class="content">
+    <h2>Lorem ipsum dolor sit amet.</h2>
+    <div><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab animi consectetur dicta ea eveniet ex id illum in ipsam iure, magnam modi perspiciatis quae, quia quod tempore unde vero vitae!</span><span>Aliquid animi assumenda beatae dicta dolor doloremque ea, eius error, id illum labore laudantium magni maxime nam nisi nostrum porro quasi quibusdam recusandae reiciendis reprehenderit, tempora temporibus ullam velit vero.</span>
+    </div>
+</div>
+<button class="close">Close</button>
+<button class="open">Open</button>
+<button class="toggle">Toggle</button>
+<script src="jquery-3.3.1.min.js"></script>
+<script>
+    // console.log($, jQuery);
+
+    // Вариант короткий
+    $(() => {
+        // your code
+    });
+
+    // // IIFE
+    // ($ => {
+    //     $(document).ready(() => {});
+    // })(jQuery);
+
+    // Вариант стандартный
+    $(document).ready(() => {
+        $('p').addClass('orange');
+        $('.text').css({
+            color: 'red',
+            fontSize: '2em',
+        });
+
+        // Выбор элементов по индексу
+        $('p').eq(2).addClass('strong'); // не самый оптимальный
+        $('p:eq(5)').addClass('strong'); // более быстрый
+
+        $('p:first').addClass('strong'); // первый элемент
+        $('p:last').addClass('strong'); // последний элемент
+
+        // Перебор эоементов
+        $('p').each((index123, item456) => {
+            console.log(index123, item456);
+            //item456.classList.add('bg'); // vanilla - не рекомендуется использовать vanilla внутри jQuery
+            $(item456).addClass('bg'); // рекомендуемый вариант
+        });
+
+        let a = document.getElementById('p1');
+
+        // Работа с событиями
+
+        // Работа с событиями
+        let $block = $('.content');
+        let $closeBtn = $('.close');
+        let $openBtn = $('.open');
+        let $toggleBtn = $('.toggle');
+
+        // e.target
+        // e.currentTarget
+        // $wrapper.on('click', '.img-wrap div a',() => {});
+        // $closeBtn.click();
+
+        $openBtn.on('click', () => {
+            // $block.show();
+            // $block.slideDown(3000);
+            $block.fadeIn(3000);
+        });
+        $closeBtn.on('click', () => {
+            // $block.hide();
+            // $block.slideUp(3000);
+            $block.fadeOut(3000);
+        });
+        $toggleBtn.on('click', () => {
+            // $block.toggle();
+            // $block.slideToggle(3000);
+            $block.fadeToggle(3000);
+        });
+
+        // console.log($('p'));
+
+        // AJAX
+        
+    });
+
+</script>
+</body>
+</html>
