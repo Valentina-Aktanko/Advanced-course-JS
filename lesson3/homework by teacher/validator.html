@@ -9,26 +9,26 @@
             padding: 5px 10px;
             margin: 10px 0;
         }
-        input:focus {
+        input:focus{
             outline: none;
         }
-        button {
+        button{
             border: none;
             background: rebeccapurple;
-            color: #fff;
+            color: white;
             padding: 10px 20px;
             text-transform: uppercase;
             font-weight: bold;
             border-radius: 5px;
         }
-        .error-msg {
+        .error-msg{
             color: red;
             margin: 10px 0;
         }
-        .invalid {
+        .invalid{
             border: 2px solid red;
         }
-        .valid {
+        .valid{
             border: 2px solid green;
         }
     </style>
@@ -37,19 +37,20 @@
 <form action="" class="some" id="myform">
     <div>
         <label>
-            You name <br>
+            Your name <br>
             <input type="text" name="name" id="name">
         </label>
     </div>
     <div>
         <label>
-            You phone <br>
+            Your phone <br>
             <input type="tel" name="phone" id="phone">
+            <div></div>
         </label>
     </div>
     <div>
         <label>
-            You email <br>
+            Your email <br>
             <input type="email" name="email" id="email">
         </label>
     </div>
@@ -58,12 +59,12 @@
 <script src="Validator.js"></script>
 <script>
     window.onload = () => {
-        document.getElementById('myform').addEventListener('submit', event => {
+        document.getElementById('myform').addEventListener('submit', e => {
             let valid = new Validator('myform');
-            if (!valid.valid) {
-                event.preventDefault();
+            if (!valid.valid){
+                e.preventDefault();
             }
-        });
+        })
     }
 </script>
 </body>
