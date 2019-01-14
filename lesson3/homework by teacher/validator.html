@@ -4,6 +4,23 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
+        input {
+            width: 200px;
+            padding: 5px 10px;
+            margin: 10px 0;
+        }
+        input:focus {
+            outline: none;
+        }
+        button {
+            border: none;
+            background: rebeccapurple;
+            color: #fff;
+            padding: 10px 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+            border-radius: 5px;
+        }
         .error-msg {
             color: red;
             margin: 10px 0;
@@ -38,17 +55,16 @@
     </div>
     <button id="val-btn">Submit</button>
 </form>
-<script src="validator.js"></script>
+<script src="Validator.js"></script>
 <script>
-    window.onload( () => {
+    window.onload = () => {
         document.getElementById('myform').addEventListener('submit', event => {
-
             let valid = new Validator('myform');
             if (!valid.valid) {
                 event.preventDefault();
             }
         });
-    })
+    }
 </script>
 </body>
 </html>

@@ -16,14 +16,21 @@ class Validator {
         this._validateForm(this.form);
     }
     _validateForm(form) {
-        let formFields = [...document.getElementById('form').getElementsByTagName('input')];
+        let errors = [...document.getElementById(form).querySelectorAll(`.${this.errorClass}`)];
+        for (let error of errors) {
+            error.remove();
+        }
+        let formFields = [...document.getElementById(form).getElementsByTagName('input')];
         for (let field of formFields) {
             this._validate(field);
+        }
+        if (![...document.querySelectorAll('.invalid')].length) {
+            this.valid = true;
         }
     }
     _validate(field) {
         if(this.patterns[field.name]) {
-            if(this.patterns[field.name].test(field.value)) {
+            if(!this.patterns[field.name].test(field.value)) {
                 field.classList.add('invalid');
                 this._addErrorMsg(field);
                 this._watchField(field);
@@ -41,7 +48,16 @@ class Validator {
             if(this.patterns[field.name].test(field.value)) {
                 field.classList.remove('invalid');
                 field.classList.add('valid');
-                field.parentNode.lastChild.remove();
+                if (field.parentNode.lastChild !== field) {
+                    field.parentNode.lastChild.remove();
+                }
+                else {
+                    field.classList.remove('valid');
+                    field.classList.remove('invalid');
+                    if (field.parentNode.lastChild.nodeName !== 'DIV') {
+                        this._addErrorMsg(field);
+                    }
+                }
             }
         });
     }
