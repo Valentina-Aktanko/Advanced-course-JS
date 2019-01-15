@@ -45,22 +45,16 @@
         let $header = $('.header-list');
         // console.log($header);
         $header.on('click', (e) => {
-            console.log(e.target);
             let $headerSelected = $(e.target);
-            // $('.header-item').each((index, item) => {
-            //     if($(item).hasClass('selected')) {
-            //         $(item).removeClass('selected');
-            //     }
-            // });
-            // $headerSelected.addClass('selected');
             $('.header-item').each((index, item) => {
                 if($(item).is($headerSelected)) {
                     $(item).addClass('selected');
+                    $('p').eq(index).addClass('show').removeClass('hide');
                 } else {
                     $(item).removeClass('selected');
+                    $('p').eq(index).addClass('hide').removeClass('show');
                 }
             });
-            // $headerSelected.addClass('selected');
         });
     });
 
