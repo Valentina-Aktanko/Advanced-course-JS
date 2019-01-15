@@ -79,22 +79,34 @@
         });
 
         // AJAX
+
         let $ajaxBlock = $('#town');
-        $.ajax({
-            url: 'towns.json',
-            type: 'GET',
-            dataType: 'json',
-            success: data => {
+        
+        // $.ajax({
+        //     url: 'towns.json',
+        //     type: 'GET',
+        //     dataType: 'json',
+        //     success: data => {
+        //         for (let town of data) {
+        //             let $town = $(`<option>${town.name}</option>`);
+        //             $ajaxBlock.append($town);
+        //         }
+        //     },
+        //     error: error => {
+        //         console.log(error);
+        //     },
+        // });
+
+        fetch('towns.json')
+            .then(result => result.json())
+            .then(data => {
                 for (let town of data) {
                     let $town = $(`<option>${town.name}</option>`);
                     $ajaxBlock.append($town);
                 }
-            },
-            error: error => {
-                console.log(error);
-            },
-        });
-    })
+            });
+
+    });
 
 </script>
 
