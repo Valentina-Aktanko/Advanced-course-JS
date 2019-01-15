@@ -62,6 +62,14 @@
 <button class="close">Close</button>
 <button class="open">Open</button>
 <button class="toggle">Toggle</button>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<div class="ajax-data"></div>
+<button class="ajax-get">Get data</button>
 <script src="jquery-3.3.1.min.js"></script>
 <script>
     // console.log($, jQuery);
@@ -132,7 +140,14 @@
         // console.log($('p'));
 
         // AJAX
-        
+        let $ajaxBlock = $('.ajax-data');
+        let $ajaxBtn = $('.ajax-get');
+
+        $ajaxBtn.on('click', () => {
+            $.ajax({
+                url: 'user.json'
+            });
+        });
     });
 
 </script>
