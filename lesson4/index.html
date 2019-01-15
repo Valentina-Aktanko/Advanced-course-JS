@@ -65,12 +65,14 @@
 <hr>
 <hr>
 <hr>
+<input type="text" class="phone">
 <hr>
 <hr>
 <hr>
 <div class="ajax-data"></div>
 <button class="ajax-get">Get data</button>
 <script src="jquery-3.3.1.min.js"></script>
+<script src="jquery.mask.js"></script>
 <script>
     // console.log($, jQuery);
 
@@ -145,9 +147,25 @@
 
         $ajaxBtn.on('click', () => {
             $.ajax({
-                url: 'user.json'
+                url: 'user.json',
+                type: 'GET',
+                //async: false // синхронный запрос
+                dataType: 'json',
+                success: data => {
+                    for (let user of data) {
+                        let $user = $(`<p>${user.name} - <strong>${user.tel}</strong></strong></p>`);
+                        $ajaxBlock.append($user);
+                    }
+                },
+                error: error => {
+                    console.log(error);
+                }
             });
         });
+
+        // Input mask
+
+        $('.phone').mask('+7 (000) 000-00-00');
     });
 
 </script>

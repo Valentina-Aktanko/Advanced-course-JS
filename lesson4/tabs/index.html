@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<ul class="header-list container">
+    <li class="header-item selected">Вкладка 1</li>
+    <li class="header-item">Вкладка 2</li>
+    <li class="header-item">Вкладка 3</li>
+    <li class="header-item">Вкладка 4</li>
+</ul>
+<div class="text-content container">
+    <p class="text show">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus architecto, asperiores cupiditate debitis
+        fuga, ipsum molestias mollitia perferendis placeat quas repellendus soluta voluptates? Modi neque pariatur
+        reprehenderit voluptas? Amet architecto at aut cum cumque doloribus ea eaque eius eveniet expedita harum illum
+        impedit incidunt, itaque iure labore minima nulla obcaecati omnis optio, perspiciatis rem sapiente sequi
+        suscipit tempora ullam voluptas. Cupiditate, numquam quod. Consequuntur corporis culpa, expedita illo iure
+        maiores maxime nihil, porro quibusdam repudiandae, sapiente suscipit! Accusantium possimus, qui? Ad amet labore
+        laudantium magnam nostrum, quidem repellendus. Fuga molestiae quasi quidem reprehenderit temporibus. Excepturi
+        ipsum modi quidem voluptas voluptates.</p>
+    <p class="text hide">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam amet asperiores commodi culpa est excepturi
+        fuga harum id illo ipsam iste maxime nisi nostrum, odit officiis perspiciatis possimus provident quidem, quo
+        repellat reprehenderit sapiente sint, velit. At aut corporis culpa, distinctio dolore dolorem ea enim, eveniet
+        illum iste sapiente voluptas!</p>
+    <p class="text hide">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aperiam beatae commodi consectetur, cum deserunt
+        doloremque dolores error eum fuga harum, iste laborum natus officia quasi quis repellendus repudiandae saepe,
+        temporibus voluptas? Esse in incidunt sapiente sequi soluta. Ab aliquid aspernatur, beatae consectetur corporis
+        culpa doloremque doloribus ducimus earum enim excepturi expedita fuga hic, id illo illum impedit inventore ipsam
+        iure iusto laudantium maxime necessitatibus nemo nobis, numquam obcaecati odio pariatur perferendis perspiciatis
+        possimus quaerat quis reprehenderit rerum sapiente soluta voluptate voluptatum? Alias architecto aut blanditiis
+        commodi consequatur dolor dolore, ducimus et, explicabo facere fugiat harum hic, id inventore ipsa ipsam laborum
+        libero magni modi nobis nostrum numquam obcaecati odio quibusdam quis sed vero. Consequatur illo inventore nihil
+        quam qui totam ullam vel! A ad, aperiam aut beatae, cumque cupiditate debitis deleniti eaque earum enim est et
+        eum, illo iusto molestias mollitia nihil nostrum nulla obcaecati officiis quod repellat repellendus?</p>
+    <p class="text hide">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci dignissimos distinctio dolor error
+        illo impedit minus molestias nulla, voluptatibus?</p>
+</div>
+
+<script src="jquery-3.3.1.min.js"></script>
+<script>
+    $(document).ready(() => {
+        let $header = $('.header-list');
+        // console.log($header);
+        $header.on('click', (e) => {
+            console.log(e.target);
+            let $headerSelected = $(e.target);
+            // $('.header-item').each((index, item) => {
+            //     if($(item).hasClass('selected')) {
+            //         $(item).removeClass('selected');
+            //     }
+            // });
+            // $headerSelected.addClass('selected');
+            $('.header-item').each((index, item) => {
+                if($(item).is($headerSelected)) {
+                    $(item).addClass('selected');
+                } else {
+                    $(item).removeClass('selected');
+                }
+            });
+            // $headerSelected.addClass('selected');
+        });
+    });
+
+</script>
+</body>
+</html>
