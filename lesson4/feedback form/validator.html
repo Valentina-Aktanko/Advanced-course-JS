@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
-        input {
+        input,
+        select {
             width: 200px;
             padding: 5px 10px;
             margin: 10px 0;
         }
-        input:focus{
+        input:focus,
+        select:focus {
             outline: none;
         }
         button{
@@ -54,18 +56,30 @@
             <input type="email" name="email" id="email">
         </label>
     </div>
+    <div>
+        <label>
+            Your city <br>
+            <select name="town" id="town">
+                <option>Пункт 1</option>
+                <option>Пункт 2</option>
+            </select>
+        </label>
+    </div>
     <button id="val-btn">Submit</button>
 </form>
 <script src="Validator.js"></script>
+<script src="../jquery-3.3.1.min.js"></script>
 <script>
-    window.onload = () => {
-        document.getElementById('myform').addEventListener('submit', e => {
+    $(document).ready(() => {
+        $('#myform').on('submit', e => {
             let valid = new Validator('myform');
             if (!valid.valid){
                 e.preventDefault();
             }
         })
-    }
+    })
+    
 </script>
+
 </body>
 </html>
