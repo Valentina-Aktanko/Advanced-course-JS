@@ -130,7 +130,11 @@
         $('.tab-wrap').on('click', '.tab:not(.active)', event => {
             event.preventDefault();
             $(event.target).closest('.tab-wrap').find('.tab.active').removeClass('active');
-            $(event.target).addClass('active');
+            $(event.target).addClass('active')
+                .closest('.wrapper')
+                .find('.itemContent')
+                .hide();
+            $($(event.target).attr('href')).fadeIn(400);
 
         })
 
