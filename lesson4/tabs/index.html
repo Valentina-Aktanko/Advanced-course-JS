@@ -127,22 +127,13 @@
 <script src="../jquery-3.3.1.min.js"></script>
 <script>
     $(document).ready(() => {
+        $('.tab-wrap').on('click', '.tab:not(.active)', event => {
+            event.preventDefault();
+            $(event.target).closest('.tab-wrap').find('.tab.active').removeClass('active');
+            $(event.target).addClass('active');
 
+        })
 
-        // let $header = $('.header-list');
-        // // console.log($header);
-        // $header.on('click', (e) => {
-        //     let $headerSelected = $(e.target);
-        //     $('.header-item').each((index, item) => {
-        //         if($(item).is($headerSelected)) {
-        //             $(item).addClass('selected');
-        //             $('p').eq(index).addClass('show').removeClass('hide');
-        //         } else {
-        //             $(item).removeClass('selected');
-        //             $('p').eq(index).addClass('hide').removeClass('show');
-        //         }
-        //     });
-        // });
     });
 
 </script>
