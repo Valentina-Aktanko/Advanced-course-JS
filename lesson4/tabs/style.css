@@ -2,10 +2,10 @@
     padding: 0;
     margin: 0;
 }
-.container {
+.wrapper {
     margin: 0 auto;
 }
-.header-list {
+.tab-wrap {
     list-style-type: none;
     display: flex;
     justify-content: space-around;
@@ -15,7 +15,7 @@
 .text-content {
     width: 600px;
 }
-.header-item {
+.tab {
     background-color: green;
     width: 149px;
     height: 100%;
@@ -24,7 +24,7 @@
     font-size: 15px;
     line-height: 50px;
 }
-.selected {
+.active {
     background-color: #fff;
     color: #000;
     border-top: 2px solid green;
@@ -32,7 +32,7 @@
     border-right: 2px solid green;
     box-sizing: border-box;
 }
-.text {
+.itemContent {
     border-left: 2px solid green;
     border-bottom: 2px solid green;
     border-right: 2px solid green;
