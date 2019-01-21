@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .wrap {
+            position: relative;
+        }
+
+        .list {
+            position: absolute;
+            top: 19px;
+            border: 1px solid darkgray;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        .city {
+            margin: 0;
+            cursor: pointer;
+            padding: 10px 15px;
+            transition: all ease-in-out .3s;
+        }
+
+        .city:hover {
+            background: darkgray;
+        }
+    </style>
+</head>
+<body>
+<select name="city" id="city"></select>
+<!--<div class="wrap">-->
+    <!--<input type="text" name="city" id="city">-->
+<!--</div>-->
+<script src="../jquery-3.3.1.min.js"></script>
+<script>
+    $(document).ready(() => {
+        let list = 'russian-cities.json';
+        fetch(list)
+            .then(result => result.json())
+            .then(data => {
+               let $select = $('#city');
+               for (let city of data) {
+                   $select.append($(`<option value="${city.name}">${city.name}</option>`));
+               }
+            });
+    });
+</script>
+</body>
+</html>
