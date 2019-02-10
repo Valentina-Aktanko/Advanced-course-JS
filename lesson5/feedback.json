@@ -1,6 +1,23 @@
-[
-  {"id": 1, "author": "Ann", "text": "Some text", "approved": false},
-  {"id": 2, "author": "Ann", "text": "Some text", "approved": false},
-  {"id": 3, "author": "Ann", "text": "Some text", "approved": false},
-  {"id": 4, "author": "Ann", "text": "Some text", "approved": false}
-]
+{
+  "maxID": 3,
+  "comments": [
+    {
+      "id": 1,
+      "author": "Anna",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, praesentium!",
+      "approved": true
+    },
+    {
+      "id": 2,
+      "author": "Tom",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic illum impedit magni obcaecati ratione, ullam.",
+      "approved": true
+    },
+    {
+      "id": 3,
+      "author": "John",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing.",
+      "approved": false
+    }
+  ]
+}

@@ -8,7 +8,7 @@ $(document).ready(() => {
 
     let cart = new Cart('getCart.json');
 
-    // Отзывы
+    //Отзывы
     let feed = new Feedback('feedback.json');
 
     // Добавление товара
